@@ -5,7 +5,7 @@ const RelatedSongs = ({data, isPlaying, activeSong, handlePauseClick, handlePlay
     <h1 className='font-bold text-3xl text-white'>Related songs :</h1>
     <div className="mt-6 w-full flex flex-col">
       {data?.map((song,index) =>(
-        <SongBar key={`${song.key}-${artistId}`} song={song} index={index} artistId={artistId} isPlaying={isPlaying} activeSong={activeSong} handlePauseClick={handlePauseClick} handlePlayClick={handlePlayClick} />
+        <SongBar key={`${song.key}-${song.id}-${artistId}`} song={song} index={index} artistId={artistId} isPlaying={isPlaying} activeSong={activeSong} handlePauseClick={handlePauseClick} handlePlayClick={handlePlayClick} />
       ))}
     </div>
   </div>
